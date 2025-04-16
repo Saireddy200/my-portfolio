@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Portfolio</title>
-  <link rel="icon" href="favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <title>My Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
     * {
       margin: 0;
@@ -15,16 +22,17 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #0e1117;
-      color: #f5f5f5;
+      background-color: #0f172a;
+      color: #f8fafc;
       line-height: 1.6;
     }
     header {
-      padding: 20px 50px;
-      background-color: #1c1f26;
+      background-color: #1e293b;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     header h1 {
       font-size: 28px;
@@ -32,7 +40,7 @@
     }
     nav a {
       margin-left: 20px;
-      color: #f5f5f5;
+      color: #f8fafc;
       text-decoration: none;
       font-weight: 500;
     }
@@ -40,69 +48,60 @@
       color: #facc15;
     }
     section {
-      padding: 60px 50px;
+      padding: 60px 40px;
     }
     .hero {
       text-align: center;
-      padding-top: 100px;
+      padding-top: 80px;
     }
     .hero h2 {
-      font-size: 40px;
+      font-size: 36px;
       color: #facc15;
     }
     .hero p {
       font-size: 18px;
-      margin-top: 10px;
       color: #cbd5e1;
+      margin-top: 10px;
     }
-    .about, .skills, .projects, .contact {
-      background-color: #1c1f26;
+
+    .projects, .contact {
+      background-color: #1e293b;
       border-radius: 10px;
       margin-top: 30px;
-      padding: 30px;
+      padding: 40px;
     }
-    h3.section-title {
+    h2.section-title {
+      text-align: center;
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: #facc15;
     }
-    .skills .bar {
-      margin-bottom: 15px;
-    }
-    .skills .bar span {
-      display: block;
-      margin-bottom: 5px;
-    }
-    .bar-bg {
-      background: #2d323e;
-      height: 10px;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .bar-fill {
-      height: 10px;
-      background-color: #facc15;
-    }
-    .projects .project-card {
-      background: #ffffff;
-      margin: 20px auto;
+
+    .project-card {
+      background-color: #334155;
       padding: 20px;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
       transition: transform 0.3s;
     }
-    .projects .project-card:hover {
-      transform: scale(1.03);
+    .project-card:hover {
+      transform: scale(1.02);
     }
+    .project-card a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
     .contact input, .contact textarea {
       width: 100%;
-      padding: 10px;
-      border: none;
+      padding: 12px;
       margin-bottom: 15px;
-      border-radius: 5px;
-      background-color: #2d323e;
-      color: #f5f5f5;
+      border: none;
+      border-radius: 6px;
+      background-color: #334155;
+      color: #f8fafc;
+      font-size: 16px;
     }
     .contact button {
       background-color: #facc15;
@@ -110,99 +109,80 @@
       padding: 10px 25px;
       border: none;
       border-radius: 5px;
+      font-weight: bold;
       cursor: pointer;
-      font-weight: 600;
     }
+
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #1c1f26;
+      background-color: #1e293b;
       color: #cbd5e1;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>MyPortfolio</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Hey! I'm Your Name</h2>
-    <p>A passionate Web Developer who loves to build beautiful web experiences</p>
+    <h2 data-aos="fade-down">Hi, I'm P Sai Srinivasa Reddy</h2>
+    <p data-aos="fade-up" data-aos-delay="100">A passionate web developer building modern websites and applications</p>
   </section>
 
-  <section id="about" class="about">
-    <h3 class="section-title">About Me</h3>
-    <p>Hello! I'm a front-end developer with a keen eye for design and user experience. I love creating clean, responsive, and interactive websites.</p>
-  </section>
+  <section id="projects" class="projects">
+    <h2 class="section-title" data-aos="fade-up">Projects</h2>
 
-  <section id="skills" class="skills">
-    <h3 class="section-title">Skills</h3>
-    <div class="bar">
-      <span>HTML</span>
-      <div class="bar-bg"><div class="bar-fill" style="width: 90%"></div></div>
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <h3>Spotify Clone</h3>
+      <p>Built using React and Tailwind CSS. Mimics Spotify’s UI with dark mode.</p>
+      <a href="https://github.com/Saireddy200/Spotify.git" target="_blank">GitHub</a> |
+      <a href="https://spotify-demo.netlify.app" target="_blank">Live Demo</a>
     </div>
-    <div class="bar">
-      <span>CSS</span>
-      <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
-    </div>
-    <div class="bar">
-      <span>JavaScript</span>
-      <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
-    </div>
-    <div class="bar">
-      <span>React</span>
-      <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
+
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <h3>DevOps Dashboard</h3>
+      <p>A CI/CD monitoring dashboard using GitHub Actions, Docker, and AWS EC2.</p>
+      <a href="https://github.com/Saireddy200/Back-end.git" target="_blank">GitHub</a> |
+      <a href="https://dashboard.example.com" target="_blank">Live Demo</a>
     </div>
   </section>
 
-  <!-- Projects Section -->
-<section id="projects" style="padding: 50px; text-align: center;">
-  <h2 data-aos="fade-up">My Projects</h2>
+  <section id="contact" class="contact">
+    <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
 
-  <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-    <h3>Spotify Clone</h3>
-    <p>A full-featured Spotify UI clone built with React & Tailwind CSS</p>
-    <a href="https://github.com/yourname/spotify-clone" target="_blank">GitHub</a> |
-    <a href="https://yourdemo.netlify.app" target="_blank">Live Demo</a>
-  </div>
-
-  <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
-    <h3>DevOps Dashboard</h3>
-    <p>Mini project showcasing Docker, GitHub Actions, and EC2 deployment</p>
-    <a href="https://github.com/yourname/devops-dashboard" target="_blank">GitHub</a> |
-    <a href="https://dashboard.demo.app" target="_blank">Live Demo</a>
-  </div>
-</section>
-
-
-<section id="contact" style="padding: 50px; text-align: center; background-color: #f9f9f9;">
-  <h2 data-aos="fade-up">Contact Me</h2>
-  <p data-aos="fade-up" data-aos-delay="100">Have a question or want to work together? Send me a message!</p>
-
-  <form action="https://formspree.io/f/meoawkab" method="POST" style="max-width: 500px; margin: auto;" data-aos="zoom-in" data-aos-delay="200">
-    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 10px 0;" />
-    <input type="email" name="_replyto" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 10px 0;" />
-    <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
-    <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Send</button>
-  </form>
-</section>
-
-  <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+    <form action="https://formspree.io/f/meoawkab" method="POST" data-aos="zoom-in" data-aos-delay="100">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    <p>© 2025 Your Name | All Rights Reserved</p>
+    <p>© 2025 @Saireddy | All Rights Reserved</p>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
 </body>
 </html>
