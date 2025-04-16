@@ -22,8 +22,7 @@ jobs:
       - name: Upload static site
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .  # This tells GitHub to publish everything in root folder
+          path: .  # Make sure your index.html is in the root
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
-
