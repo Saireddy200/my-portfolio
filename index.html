@@ -1,13 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> <!-- Charset meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta -->
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e1117;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px 50px;
+      background-color: #1c1f26;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 28px;
+      color: #facc15;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #f5f5f5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #facc15;
+    }
+    section {
+      padding: 60px 50px;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 100px;
+    }
+    .hero h2 {
+      font-size: 40px;
+      color: #facc15;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #cbd5e1;
+    }
+    .about, .skills, .projects, .contact {
+      background-color: #1c1f26;
+      border-radius: 10px;
+      margin-top: 30px;
+      padding: 30px;
+    }
+    h3.section-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #facc15;
+    }
+    .skills .bar {
+      margin-bottom: 15px;
+    }
+    .skills .bar span {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .bar-bg {
+      background: #2d323e;
+      height: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 10px;
+      background-color: #facc15;
+    }
+    .projects .project-card {
+      background-color: #2d323e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .projects .project-card:hover {
+      transform: scale(1.02);
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: #2d323e;
+      color: #f5f5f5;
+    }
+    .contact button {
+      background-color: #facc15;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c1f26;
+      color: #cbd5e1;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Portfolio</h1>
-  <p>This is a sample portfolio page deployed using GitHub Actions!</p>
+  <header>
+    <h1>MyPortfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hey! I'm Your Name</h2>
+    <p>A passionate Web Developer who loves to build beautiful web experiences</p>
+  </section>
+
+  <section id="about" class="about">
+    <h3 class="section-title">About Me</h3>
+    <p>Hello! I'm a front-end developer with a keen eye for design and user experience. I love creating clean, responsive, and interactive websites.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h3 class="section-title">Skills</h3>
+    <div class="bar">
+      <span>HTML</span>
+      <div class="bar-bg"><div class="bar-fill" style="width: 90%"></div></div>
+    </div>
+    <div class="bar">
+      <span>CSS</span>
+      <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
+    </div>
+    <div class="bar">
+      <span>JavaScript</span>
+      <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
+    </div>
+    <div class="bar">
+      <span>React</span>
+      <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h3 class="section-title">Projects</h3>
+    <div class="project-card">
+      <h4>Project One</h4>
+      <p>A simple landing page using HTML/CSS with animation effects.</p>
+    </div>
+    <div class="project-card">
+      <h4>Project Two</h4>
+      <p>A weather app that uses an open API to fetch weather data in real-time.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3 class="section-title">Contact Me</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
